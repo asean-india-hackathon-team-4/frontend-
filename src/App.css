@@ -1,0 +1,378 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  width: 0.3rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #adb5ba;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #ED5565;
+  box-shadow: 120px 80px 40px 20px #ED5565 !important;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(23, 25, 50);
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  height: 8vh;
+  width: 100vw;
+  justify-content: center;
+}
+
+.logo {
+  position: absolute;
+  left: 12px;
+  top: -17px;
+  height: auto;
+  width: 10vw;
+}
+
+.header-title {
+  font-size: 32px;
+  text-align: center;
+  color: white;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  height: 92vh;
+  width: 100vw;
+}
+
+.navigation {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 12vw;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.nav-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 100px;
+}
+
+.nav-option-title {
+  font-size: 15px;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+.nav-option-icon {
+  color: white;
+  font-weight: 700;
+  height: 32px !important;
+  width: 22px !important;
+  text-align: center;
+}
+
+.nav-option:hover {
+  background-color: transparent !important;
+  color: white !important;
+  border: 1px solid rgb(25, 109, 165);
+  box-shadow: 0 0 10px white !important;
+  border-radius: 50%;
+}
+
+.map-menu {
+  z-index: 1000;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.map-menu-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex: 2;
+  font-size: 57px;
+  color: white;
+}
+
+.map-options {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  flex: 5;
+}
+
+.btn {
+  width: 170px !important;
+  margin-left: 30px !important;
+  margin-right: 30px !important;
+  border-radius: 7px !important;
+}
+
+.btn:hover {
+  border: solid 1px rgb(79, 154, 177) !important;
+}
+
+.active-btn {
+  background-color: transparent !important;
+  color: white !important;
+  border: 1px solid rgb(25, 109, 165);
+  box-shadow: 0 0 10px white !important;
+}
+
+.nav-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  top: 0px;
+  right: 17px;
+  height: 20vh;
+}
+
+.close-button {
+  font-weight: 700;
+  height: 32px !important;
+  width: 32px !important;
+  text-align: center;
+  border-radius: 50%;
+  color: white;
+  z-index: 1000;
+  box-shadow: inset 0 0 40px rgb(25, 109, 165),0 0 20px 5px rgb(25, 109, 165);
+}
+
+.red-flags {
+  background-color: black;
+  height: calc( 100% - 10px );
+  width: calc( 100% - 10px );
+  margin-bottom: 10px;
+  margin-right: 10px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.date-selectors, 
+.fetch-data {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex: 1;
+  width: 100%;
+}
+
+.grid {
+  background-color: #ED5565;
+  flex: 8;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.fetch-btn:hover {
+  background-color: transparent !important;
+  color: white !important;
+  border: 1px solid rgb(25, 109, 165);
+  box-shadow: 0 0 10px white !important;
+}
+
+.date {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.date-label {
+  text-align: center;
+  width: 120px;
+  background-color: transparent !important;
+  color: white !important;
+  border: 1px solid rgb(25, 109, 165);
+  box-shadow: 0 0 10px white !important;
+  margin-right: 20px;
+  border-radius: 10px;
+}
+
+.reports-download-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.reports-download-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.reports{
+  margin: 10px;
+  width: 90%;
+  height: 90%;
+  background-color: black;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.download-btn {
+  width: 120px !important;
+  margin-left: 30px !important;
+  margin-right: 30px !important;
+  border-radius: 7px !important;
+}
+
+.download-btn:hover {
+  background-color: transparent !important;
+  color: white !important;
+  border: 1px solid rgb(25, 109, 165);
+  box-shadow: 0 0 10px white !important;
+}
+
+.report-content{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex: 4;
+}
+
+.report-title {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+
+.fish-img {
+  max-height: 200px;
+  max-width: 200px;
+  border-radius: 20px;
+  border: 1px solid rgb(25, 109, 165);
+  box-shadow: 0 0 10px white !important;
+}
+
+.fish-vul {
+  background-color: black;
+  width: calc( 100% - 10px );
+  height: calc( 100% - 10px );
+  border-radius: 20px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.stock-title {
+  text-align: center;
+  width: 120px;
+  background-color: transparent !important;
+  color: white !important;
+  border: 1px solid rgb(25, 109, 165);
+  box-shadow: 0 0 10px white !important;
+  margin-right: 20px;
+  border-radius: 10px;
+}
+
+.fish-vul-options {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  flex: 1;
+}
+
+.plot {
+  flex: 4;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.gis {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.gis-btn:hover {
+  background-color: transparent !important;
+  color: white !important;
+  border: 1px solid rgb(25, 109, 165);
+  box-shadow: 0 0 10px white !important;
+}
+
+.row {
+  margin: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.input {
+  text-align: center !important;
+  border-radius: 20px;
+}
+
+.input:focus {
+  border: solid 1px white;
+  box-shadow: 1px 1px 5px white, -1px -1px 5px white;
+}
+
+.select-btn {
+  width: 250px !important;
+}
