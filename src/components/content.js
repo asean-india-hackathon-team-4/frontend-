@@ -5,7 +5,8 @@ import RedFlags from './redFlags'
 import DownloadReports from './reportsDownload'
 import FishVulnerability from './fishVulnerabilityPlot'
 import Analytics from './analytics_reports'
-import GIS from './gis'
+import LiveBidding from './liveBidding';
+// import GIS from './gis'
 
 
 const Content = () => {
@@ -17,12 +18,13 @@ const Content = () => {
     return (
         <div className='content'>
             <Navigation map={map} content={content} changeMap={changeMap} changeContent={changeContent}/>
-            {content==='map' ? <Map map={map}/> : null}
-            {content==='red_flags' ? <RedFlags/> : null}
-            {content==='download_fish_reports' ? <DownloadReports/> : null}
-            {content==='download_analytics_reports' ? <Analytics/> : null}
-            {content==='plot' ? <FishVulnerability/> : null}
-            {content==='GIS' ? <GIS/> : null}
+            {content==='map' && <Map map={map}/>}
+            {content==='red_flags' && <RedFlags/>}
+            {content==='download_fish_reports' && <DownloadReports/>}
+            {content==='download_analytics_reports' && <Analytics/>}
+            {content==='plot' && <FishVulnerability/>}
+            {content==='live_bidding' && <LiveBidding />}
+            {/* {content==='GIS' && <GIS/>} */}
         </div>
     )
 }

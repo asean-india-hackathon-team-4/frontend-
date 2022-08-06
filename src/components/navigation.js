@@ -25,9 +25,12 @@ const Navigation = ({map,content,changeMap,changeContent}) => {
             else if(newContent==='plot'){
                 setHeader('Fish Vulnerability')
             }
-            else if(newContent==='GIS'){
-                setHeader('GIS')
+            else if(newContent==='live_bidding'){
+                setHeader('Live Bidding')
             }
+            // else if(newContent==='GIS'){
+            //     setHeader('GIS')
+            // }
             changeContent(newContent)
         }
     }
@@ -132,42 +135,48 @@ const Navigation = ({map,content,changeMap,changeContent}) => {
                 </div>
             : null}
             <div className='navigation'>
-                <div className='nav-option'>
+                <div className='nav-option' onClick={()=>{updateContentPage('map')}}>
                     <ExploreIcon className='nav-option-icon'/>
-                    <div className='nav-option-title'  onClick={()=>{updateContentPage('map')}} onDoubleClick={()=>{toggleMapMenu(!mapMenu)}}>
+                    <div className='nav-option-title' onDoubleClick={()=>{toggleMapMenu(!mapMenu)}}>
                         Featured Maps
                     </div>
                 </div>
-                <div className='nav-option'>
+                <div className='nav-option' onClick={()=>{updateContentPage('red_flags')}}>
                     <TableChartIcon className='nav-option-icon'/>
-                    <div className='nav-option-title'  onClick={()=>{updateContentPage('red_flags')}}>
+                    <div className='nav-option-title'>
                         Red Flags
                     </div>
                 </div>
-                <div className='nav-option'>
+                <div className='nav-option' onClick={()=>{updateContentPage('download_fish_reports')}}>
                     <CloudDownloadIcon className='nav-option-icon'/>
-                    <div className='nav-option-title'  onClick={()=>{updateContentPage('download_fish_reports')}}>
+                    <div className='nav-option-title'>
                         Fish Reports Download
                     </div>
                 </div>
-                <div className='nav-option'>
+                <div className='nav-option' onClick={()=>{updateContentPage('download_analytics_reports')}}>
                     <CloudDownloadIcon className='nav-option-icon'/>
-                    <div className='nav-option-title'  onClick={()=>{updateContentPage('download_analytics_reports')}}>
+                    <div className='nav-option-title'>
                         Analytics Reports Download
                     </div>
                 </div>
-                <div className='nav-option'>
+                <div className='nav-option' onClick={()=>{updateContentPage('plot')}}>
                     <ExploreIcon className='nav-option-icon'/>
-                    <div className='nav-option-title'  onClick={()=>{updateContentPage('plot')}}>
+                    <div className='nav-option-title'>
                         Fish Vulnerability
                     </div>
                 </div>
-                <div className='nav-option'>
+                <div className='nav-option' onClick={()=>{updateContentPage('live_bidding')}}>
                     <ExploreIcon className='nav-option-icon'/>
-                    <div className='nav-option-title'  onClick={()=>{updateContentPage('GIS')}}>
-                        GIS
+                    <div className='nav-option-title'>
+                        Live Bidding
                     </div>
                 </div>
+                {/* <div className='nav-option' onClick={()=>{updateContentPage('GIS')}}>
+                    <ExploreIcon className='nav-option-icon'/>
+                    <div className='nav-option-title'>
+                        GIS
+                    </div>
+                </div> */}
             </div>
         </div>
     )

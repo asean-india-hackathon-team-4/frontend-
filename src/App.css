@@ -376,3 +376,82 @@ body {
 .select-btn {
   width: 250px !important;
 }
+
+.table-header {
+  color: black;
+  background-color: white;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 15px;
+  margin: 10px;
+}
+
+.table-entry {
+  font-size: 12px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.fish_type {
+  flex: 1;
+}
+
+.transaction_hash {
+  flex: 3;
+}
+
+.status {
+  flex: 1;
+}
+
+.timestamp {
+  flex: 1;
+}
+
+.bid_price  {
+  flex: 1;
+}
+
+.more_details  {
+  flex: 1;
+}
+
+.mask {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000000;
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+
+.bid {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 20px;
+  background-color: black;
+  border-radius: 20px;
+  border: 1px solid white;
+  height: 70vh;
+  width: 70vw;
+  color: white;
+}
+
+.bid-entry {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 20px;
+}
+
+.bid-entry-value {
+  margin-left: 20px;
+  color: #ED5565;
+}
